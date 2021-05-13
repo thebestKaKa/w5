@@ -1,0 +1,23 @@
+{
+  "identification": "w5soar",
+  "is_public": true,
+  "name": "get_result",
+  "version": "0.1",
+  "description": "执行阻断操作",
+  "type": "基本应用",
+  "action": [
+    {
+      "name": "阻断结果",
+      "func": "get_result"
+    }
+  ],
+  "args": {
+    "get_result": [
+      {
+        "key": "ip_adr",
+        "type": "text",
+        "required": true
+      }
+    ]
+  }
+}

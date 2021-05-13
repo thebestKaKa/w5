@@ -1,0 +1,23 @@
+{
+  "identification": "w5soar",
+  "is_public": true,
+  "name": "disable_internet",
+  "version": "0.1",
+  "description": "断开设备网络",
+  "type": "基本应用",
+  "action": [
+    {
+      "name": "ip阻断",
+      "func": "disable_internet"
+    }
+  ],
+  "args": {
+    "disable_internet": [
+      {
+        "key": "id",
+        "type": "text",
+        "required": true
+      }
+    ]
+  }
+}

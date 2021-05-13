@@ -1,0 +1,23 @@
+{
+  "identification": "w5soar",
+  "is_public": true,
+  "name": "block",
+  "version": "0.1",
+  "description": "执行阻断操作",
+  "type": "基本应用",
+  "action": [
+    {
+      "name": "ip阻断",
+      "func": "block_up"
+    }
+  ],
+  "args": {
+    "block_up": [
+      {
+        "key": "ip_adr",
+        "type": "text",
+        "required": true
+      }
+    ]
+  }
+}

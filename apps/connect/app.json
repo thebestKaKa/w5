@@ -1,0 +1,23 @@
+{
+  "identification": "w5soar",
+  "is_public": true,
+  "name": "connect",
+  "version": "0.1",
+  "description": "执行阻断操作",
+  "type": "基本应用",
+  "action": [
+    {
+      "name": "ip阻断测试",
+      "func": "connect"
+    }
+  ],
+  "args": {
+    "connect": [
+      {
+        "key": "ip_adr",
+        "type": "text",
+        "required": true
+      }
+    ]
+  }
+}

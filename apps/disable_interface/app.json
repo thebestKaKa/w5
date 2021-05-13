@@ -1,0 +1,23 @@
+{
+  "identification": "w5soar",
+  "is_public": true,
+  "name": "disable_interface",
+  "version": "0.1",
+  "description": "禁用物理接口",
+  "type": "基本应用",
+  "action": [
+    {
+      "name": "ip阻断",
+      "func": "disable_physical_interface"
+    }
+  ],
+  "args": {
+    "disable_physical_interface": [
+      {
+        "key": "id",
+        "type": "text",
+        "required": true
+      }
+    ]
+  }
+}
