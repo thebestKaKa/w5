@@ -1,0 +1,23 @@
+{
+  "identification": "w5soar",
+  "is_public": true,
+  "name": "send order",
+  "version": "0.1",
+  "description": "发送阻断命令",
+  "type": "基本应用",
+  "action": [
+    {
+      "name": "发送阻断命令",
+      "func": "send_order"
+    }
+  ],
+  "args": {
+    "send_order": [
+      {
+        "key": "ip_adr",
+        "type": "text",
+        "required": true
+      }
+    ]
+  }
+}
