@@ -13,7 +13,8 @@ testData = [
     '{"warningInf":"Attack","targetIP":"0.0.0.1","targetPort":"80","sourceIP":"192.0.0.1","sourcePort":"99"}',
     '{"warningInf":"Attack","targetIP":"0.0.0.1","targetPort":"80","sourceIP":"192.0.0.1","sourcePort":"99"}',
     '{"warningInf":"Attack","targetIP":"0.0.0.1","targetPort":"80","sourceIP":"192.0.0.1","sourcePort":"99"}',
-    '{"warningInf":"Attack","targetIP":"0.0.0.1","targetPort":"80","sourceIP":"192.0.0.1","sourcePort":"99"}'
+    '{"warningInf":"Attack","targetIP":"0.0.0.1","targetPort":"80","sourceIP":"192.0.0.1","sourcePort":"99"}',
+    '{"warningInf":"Unsafe","targetIP":"0.0.0.1","targetPort":"80","sourceIP":"192.0.0.1","sourcePort":"99"}',
 ]
 
 url = "http://127.0.0.1:5000/MLP"
@@ -22,30 +23,30 @@ url = "http://127.0.0.1:5000/MLP"
 for i in range(len(testData)):
     time.sleep(5)
     res = requests.post(url=url, data=testData[i])
-    lv = res.text
+    lv = int(res.text)
     print(res.text)  # lv
     tpData = json.loads(testData[i])
-    print(tpData)
-    print(tpData['warningInf'])
+    # print(tpData)
+    # print(tpData['warningInf'])
     headers = {
         "Content-Type": "application/json"
     }
     if tpData['warningInf'] == 'Attack' and lv == 0:
         data = {
             "key": "9FBBB6BFFAD8426FAE18BFD67139D0DC",
-            "uuid": "04a10f60-b3c7-11eb-b1f5-c1d872aaab24",
+            "uuid": "2062b080-b464-11eb-98e4-8590585d6e25",
             "text": tpData['targetIP']
         }
     elif tpData['warningInf'] == 'Attack' and lv == 1:
         data = {
             "key": "9FBBB6BFFAD8426FAE18BFD67139D0DC",
-            "uuid": "04a10f60-b3c7-11eb-b1f5-c1d872aaab24",
+            "uuid": "2062b080-b464-11eb-98e4-8590585d6e25",
             "text": tpData['targetIP']
         }
     elif tpData['warningInf'] == 'Attack' and lv == 2:
         data = {
             "key": "9FBBB6BFFAD8426FAE18BFD67139D0DC",
-            "uuid": "04a10f60-b3c7-11eb-b1f5-c1d872aaab24",
+            "uuid": "2062b080-b464-11eb-98e4-8590585d6e25",
             "text": tpData['targetIP']
         }
     elif tpData['warningInf'] == 'Unsafe' and lv == 0:
