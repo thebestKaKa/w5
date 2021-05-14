@@ -1,0 +1,23 @@
+{
+  "identification": "w5soar",
+  "is_public": true,
+  "name": "block_up_v2",
+  "version": "0.1",
+  "description": "场景一告警等级三",
+  "type": "基本应用",
+  "action": [
+    {
+      "name": "ip阻断",
+      "func": "block_up"
+    }
+  ],
+  "args": {
+    "block_up": [
+      {
+        "key": "id",
+        "type": "text",
+        "required": true
+      }
+    ]
+  }
+}

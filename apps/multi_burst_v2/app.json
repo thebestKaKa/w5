@@ -1,0 +1,23 @@
+{
+  "identification": "w5soar",
+  "is_public": true,
+  "name": "multi_burst_v2",
+  "version": "0.1",
+  "description": "多场站爆发对应策略",
+  "type": "基本应用",
+  "action": [
+    {
+      "name": "处理多场站爆发问题",
+      "func": "multi_burst"
+    }
+  ],
+  "args": {
+    "multi_burst": [
+      {
+        "key": "id",
+        "type": "text",
+        "required": true
+      }
+    ]
+  }
+}
